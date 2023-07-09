@@ -3,7 +3,8 @@
 ## Description :
 The Snake game is a classic arcade game where the player controls a snake that moves around the screen, eating food and growing longer. The objective of the game is to eat as much food as possible without colliding with the snake's own body or the walls of the game area.
 
-Play this game https://rushikeshpol15.github.io/Snake-game/
+Play this game here:  https://rushikeshpol15.github.io/Snake-game/
+
 To create the Snake game, I have used HTML, CSS, and JavaScript.
 
 The HTML structure will consist of a <div> element that represents the game area. Inside the game area, there will be a <div> element for each segment of the snake, as well as a <div> element for the food.
