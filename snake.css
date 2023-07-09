@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    /* border: 2px solid blue; */
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)) 
+    ,url("game.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    color: white;
+}
+.sound:hover{
+    cursor: pointer;
+}
+.grid{
+    background-image: 
+    linear-gradient(rgba(43, 42, 42, 0.436),rgba(0, 0, 0, 0.488)),
+    url("snakeGameBackground new.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 70%;
+    height: 80vh;
+    /* gap: 5px; */
+    display: grid;
+    grid-template-columns: repeat(28,1fr);
+    grid-template-rows: repeat(24,1fr);
+}
+.scoreBoard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.scoreBoard h1{color: yellow;}
+.head{
+    background-color: rgb(238, 207, 207);
+    border: 1px solid black;
+    border-radius: 40%;
+    
+}
+.body{
+    background-color: hsla(0, 45%, 98%, 0.884);
+    border: 1px solid black;
+    border-radius: 40%;
+
+}
+.food{
+    /* background-image: url("apple.png"); */
+    background-color: rgb(42, 209, 27);
+    border-radius: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.gameover{
+    position: absolute;
+    z-index: 22;
+    top: 30%;
+    left: 30%;
+    border: 2px solid green;
+    width: 40%;
+    height: 35%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(231, 88, 36);
+}
+.gameover.active{
+    display: none;
+}
+.gameover button{
+    background-color: rgb(26, 189, 34);
+    color: white;
+    font-size: 1em;
+    width: 100px;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 10px;
+}
+.gameover button:hover{
+    background-color: rgb(36, 223, 36);
+}
+
+@media screen and (min-width:0px) and (max-width:250px) {
+    .gameover h1,.gameover button{
+        font-size: 0.8em;
+    }
+    .gameover button{
+        padding: 3px;
+        width: 70px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+/* and (min-height:0px) and (max-height:720px){ */
+    /* .grid{
+        grid-template-columns: repeat(14,1fr);
+        grid-template-rows: repeat(18,1fr);
+    } */
+    .scoreBoard
+    {
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: flex-start;
+    }
+    .scoreBoard h1{font-size: 0.8em;}
+    .scoreBoard svg{height: 0.8em;}
+}
